@@ -27,7 +27,7 @@ class MenuItem(models.Model):
         return u'%s' % self.name
 
 class Container(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=300)
     image = models.ImageField(upload_to='upload')
     dest = models.CharField(max_length=200, default="/")
     position = models.IntegerField()
