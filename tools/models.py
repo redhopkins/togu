@@ -8,7 +8,7 @@ class ToolListItem(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.name
-	
+
 class Tool(models.Model):
     tool_list_item = models.ForeignKey(ToolListItem)
     tool_name = models.CharField(max_length=200)
