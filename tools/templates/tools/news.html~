@@ -1,0 +1,12 @@
+{% extends "tools/base.html" %}
+{% load staticfiles %}
+{% block main %}
+<section>
+    <article class="content">
+		{% for newsitem in news %}
+        <h3>{{ newsitem.name }}</h3>
+		<p>{{ newsitem.content }}</p>
+		{% endfor %}
+    </article>
+</section>
+{% endblock main %}

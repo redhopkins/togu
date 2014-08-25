@@ -24,7 +24,7 @@
                     <li class="open_popup" rel="popup1">
                         <div class="details" >
                             <h3>{{ tool.tool_name }}</h3>
-                            <p>{{ tool.tool_price }} руб</p>
+                            <p>{{ tool.tool_price }}руб</p>
                         </div>
                         <a class="more" href="#info1"><img src="/{{ tool.tool_image }}"></a>
                     </li>

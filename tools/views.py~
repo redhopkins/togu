@@ -6,7 +6,7 @@ def index(request):
     all_menu_items = models.MenuItem.objects.order_by('position')
     all_containers = models.Container.objects.order_by('position')
     content = models.IndexContent.objects.all()
-    context = {'menuitems': all_menu_items, 'containers': all_containers, 'indexcontents': content}
+    context = {'menuitems': all_menu_items, 'containers': all_containers, 'indexcontent': content}
     return render(request, 'tools/index.html', context)
     
 def contacts(request):

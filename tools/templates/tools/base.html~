@@ -25,7 +25,7 @@
 		    <div class="address">
                 <a id="phone" href="tel:8121111111">(812)111-11-11</a>
                 <br>
-                <a id="mail" href="mailto:info@togu.pro">info@togu.pro</a>
+                <a id="mail" href="#">info@togu.pro</a>
                 <div>
                 <a href="#">Санкт-Петербург<br>пр.Елизарова, д.34</a>
                 </div>

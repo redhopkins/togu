@@ -12,7 +12,7 @@
 </div>
 <main>
     <section>
-        {% for indexcontent in indexcontents %}
+        {% for indexcontent in content %}
         <article  class="content">
             {{ indexcontent.content }}
         </article>
