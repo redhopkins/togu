@@ -5,7 +5,7 @@
     <aside class="container">
         <ul>
 			{% for container in containers %}
-            <li><a href="{{ container.dest }}"><img width="65%" src="{{ container.image }}"><br><span>{{ container.name }}</span></img></a></li>
+            <a href="{{ container.dest }}"><li style="background-image: url({{ container.image }});" class="image-wrap container-image"><span>{{ container.name }}</span></li></a>
             {% endfor %}
         </ul>
     </aside>

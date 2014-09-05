@@ -10,7 +10,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'togu.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
+    
+    url(r'admin_tools/', include('admin_tools.urls')),
     url(r'^$', views.index, name='index'),
     url(r'^contacts/', views.contacts, name='contacts'),
 	url(r'^gallery/', views.gallery, name='gallery'),

@@ -31,7 +31,7 @@ class Container(models.Model):
     image = models.ImageField(upload_to='upload')
     dest = models.CharField(max_length=200, default="/")
     position = models.IntegerField()
-
+    
     def __unicode__(self):
         return u'%s' % self.name
 
