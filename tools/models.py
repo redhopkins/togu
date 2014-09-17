@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 from django.db import models
 
 # Create your models here.
@@ -9,14 +11,65 @@ class ToolListItem(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
-class Tool(models.Model):
-    tool_list_item = models.ForeignKey(ToolListItem)
-    tool_name = models.CharField(max_length=200)
-    tool_image = models.ImageField(upload_to='upload')
-    tool_price = models.DecimalField(max_digits=7, decimal_places=2)
+class ScissorTool(models.Model):
+    list_item = models.ForeignKey(ToolListItem)
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='upload')
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+
+    # Параметры специфичные для ножниц
+    material = models.CharField(max_length=200)
+    use = models.CharField(max_length=200)
+    length = models.IntegerField()
+    feature = models.CharField(max_length=300)
 
     def __unicode__(self):
-        return u'%s' % self.tool_name
+        return u'%s' % self.name
+
+class ClipperTool(models.Model):
+    list_item = models.ForeignKey(ToolListItem)
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='upload')
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+
+    # Параметры специфичные для кусачек
+    material = models.CharField(max_length=200)
+    use = models.CharField(max_length=200)
+    length = models.IntegerField()
+    feature = models.CharField(max_length=300)
+
+    def __unicode__(self):
+        return u'%s' % self.name
+
+class PusherTool(models.Model):
+    list_item = models.ForeignKey(ToolListItem)
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='upload')
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+
+    # Параметры специфичные для пушеров
+    material = models.CharField(max_length=200)
+    use = models.CharField(max_length=200)
+    length = models.IntegerField()
+    feature = models.CharField(max_length=300)
+
+    def __unicode__(self):
+        return u'%s' % self.name
+
+class TweezersTool(models.Model):
+    list_item = models.ForeignKey(ToolListItem)
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='upload')
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+
+    # Параметры специфичные для пинцетов
+    material = models.CharField(max_length=200)
+    use = models.CharField(max_length=200)
+    length = models.IntegerField()
+    feature = models.CharField(max_length=300)
+
+    def __unicode__(self):
+        return u'%s' % self.name
 
 class MenuItem(models.Model):
     name = models.CharField(max_length=200)
@@ -45,16 +98,6 @@ class NewsItem(models.Model):
 
 class IndexContent(models.Model):
     content = models.TextField()
-
-class ScissorsParam(models.Model):
-    name = models.CharField(max_length=200)
-    material = models.CharField(max_length=200)
-    use = models.CharField(max_length=200)
-    length = models.IntegerField()
-    feature = models.CharField(max_length=300)
-
-    def __unicode__(self):
-        return u'%s' % self.name
 
 class Contact(models.Model):
     phone = models.CharField(max_length=30)

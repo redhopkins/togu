@@ -21,12 +21,16 @@
                 <![endif]-->
                 <ul id="grid">
                     {% for tool in tools %}
-                    <li class="open_popup" rel="popup1">
+                    <li class="open_popup tool-{{ tool.id }}" rel="popup1">
                         <div class="details" >
-                            <h3>{{ tool.tool_name }}</h3>
-                            <p>{{ tool.tool_price }} руб</p>
+                            <h3>{{ tool.name }}</h3>
+                            <p>{{ tool.price }} руб</p>
                         </div>
-                        <img src="/{{ tool.tool_image }}">
+                        <img src="/{{ tool.image }}">
+                        <span style="display: none;">{{ tool.material }}</span>
+                        <span style="display: none;">{{ tool.use }}</span>
+                        <span style="display: none;">{{ tool.length }}</span>
+                        <span style="display: none;">{{ tool.feature }}</span>
                     </li>
                     {% endfor %}
                     
@@ -37,30 +41,28 @@
                 <div class="popup" id="popup1">
                     <div class="close"><img src="{% static 'tools/img/close.png' %}"></img></div>
                     <div class="item_img">
-                        <img src="/{{ tool.tool_image }}">
+                        <img src="">
                     </div>
                     <div class="block popup_form">
-                        {% for scissorsparam in scissorsparams %}
-                        <p class="shadow">{{ scissorsparam.name }}</p>
+                        <p class="shadow"></p>
                             <table>
                                 <tr>
                                     <td>Материал:</td>
-                                    <td>{{ scissorsparam.material }}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Назначение:</td>
-                                    <td>{{ scissorsparam.use }}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Длина режущей части:</td>
-                                    <td>{{ scissorsparam.length }} мм</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Особенности:</td>
-                                    <td>{{ scissorsparam.feature }}</td>
+                                    <td></td>
                                 </tr>
                             </table>
-                        {% endfor %}
                         <p><a href="#">Добавить в корзину</a></p>
                     </div>
                 </div>

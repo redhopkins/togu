@@ -19,5 +19,5 @@ urlpatterns = patterns('',
     url(r'^services/', views.page, name='services'),
     url(r'^news/', views.news, name='news'),
     url(r'^admin/', include(admin.site.urls)),
-) + static('/upload/', document_root='/home/ogo/repository/oncemore/togu/upload')
+) + static('/upload/', document_root='/home/tako/tmp/oncemore/togu/upload')
 
