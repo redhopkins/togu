@@ -4,7 +4,7 @@
 <section>
             <div class="block">
                 <ul>
-					{% for toollistitem in toollistitems %}
+                    {% for toollistitem in toollistitems %}
                     <li class="box shadow">{{ toollistitem.name }}</li>
                     {% endfor %}
                 </ul>
@@ -13,14 +13,14 @@
                 <!--[if lte IE 8]>
                 <noscript>
                 <style>
-                #information li { overflow: visible; position: relative; margin: 0 auto; margin-bottom: 25px; background: #fff; width: 600px; padding: 30px; height: auto; list-style: none; }	
-                #information li div a.close { position: relative; background: transparent; padding: 0; color: #0090e2; font-size: 12px; font-weight: normal; left: 0; top: 0; }	
+                #information li { overflow: visible; position: relative; margin: 0 auto; margin-bottom: 25px; background: #fff; width: 600px; padding: 30px; height: auto; list-style: none; }    
+                #information li div a.close { position: relative; background: transparent; padding: 0; color: #0090e2; font-size: 12px; font-weight: normal; left: 0; top: 0; }    
                 iframe, .backface { display: none; }
                 </style>
                 </noscript>
                 <![endif]-->
                 <ul id="grid">
-					{% for tool in tools %}
+                    {% for tool in tools %}
                     <li class="open_popup" rel="popup1">
                         <div class="details" >
                             <h3>{{ tool.tool_name }}</h3>

@@ -8,7 +8,7 @@ class ToolListItem(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.name
-	
+
 class Tool(models.Model):
     tool_list_item = models.ForeignKey(ToolListItem)
     tool_name = models.CharField(max_length=200)
@@ -17,7 +17,7 @@ class Tool(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.tool_name
-    
+
 class MenuItem(models.Model):
     name = models.CharField(max_length=200)
     dest = models.CharField(max_length=200, default="/")
@@ -31,7 +31,7 @@ class Container(models.Model):
     image = models.ImageField(upload_to='upload')
     dest = models.CharField(max_length=200, default="/")
     position = models.IntegerField()
-    
+
     def __unicode__(self):
         return u'%s' % self.name
 
@@ -42,20 +42,20 @@ class NewsItem(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.name
-        
+
 class IndexContent(models.Model):
     content = models.TextField()
-    
+
 class ScissorsParam(models.Model):
     name = models.CharField(max_length=200)
     material = models.CharField(max_length=200)
     use = models.CharField(max_length=200)
     length = models.IntegerField()
     feature = models.CharField(max_length=300)
-    
+
     def __unicode__(self):
         return u'%s' % self.name
-        
+
 class Contact(models.Model):
     phone = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
