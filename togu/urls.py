@@ -15,9 +15,9 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^contacts/', views.contacts, name='contacts'),
 	url(r'^gallery/', views.gallery, name='gallery'),
-	url(r'^about/', views.contacts, name='about'),
-	url(r'^services/', views.contacts, name='services'),
+	url(r'^about/', views.page, name='about'),
+	url(r'^services/', views.page, name='services'),
 	url(r'^news/', views.news, name='news'),
     url(r'^admin/', include(admin.site.urls)),
-) + static('/upload/', document_root='/home/ogo/repository/togu/upload')
+) + static('/upload/', document_root='/home/ogo/repository/oncemore/togu/upload')
 

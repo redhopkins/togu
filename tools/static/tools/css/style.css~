@@ -234,15 +234,14 @@ a:hover{
                 font: 14px/18px "Lucida Grande", Verdana, Helvetica, sans-serif;
             }
 
-            .container-image{
-                background-image: url(/{{ container.image }});
-                background-repeat: no-repeat;
-                background-origin: padding-box;
-                background-position: right 50% top 10%;
-            }            
-            
 #mobile {
     background-image: url("../img/gazm.jpg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: right 50% top 10%;
+}
+
+.container-image{
     background-repeat: no-repeat;
     background-origin: padding-box;
     background-position: right 50% top 10%;
@@ -321,4 +320,11 @@ a:hover{
 
     .menu a:hover{
         color:  black;
+    }
+
+.contacts{
+    width: 50%;
+}
+    .contacts td{
+        padding-bottom:20px;
     }

@@ -35,30 +35,32 @@
             <div class="overlay">
                 <div class="backdrop"></div>
                 <div class="popup" id="popup1">
-                    <div class="close"><img src="img/close.png"></img></div>
+                    <div class="close"><img src="{% static 'tools/img/close.png' %}"></img></div>
                     <div class="item_img">
-                        <img src="img/sci.jpg">
+                        <img src="/{{ tool.tool_image }}">
                     </div>
                     <div class="block popup_form">
-                        <p class="shadow">Ножницы обыкновенные, арт. 12345</p>
+                        {% for scissorsparam in scissorsparams %}
+                        <p class="shadow">{{ scissorsparam.name }}</p>
                             <table>
                                 <tr>
                                     <td>Материал:</td>
-                                    <td>сталь</td>
+                                    <td>{{ scissorsparam.material }}</td>
                                 </tr>
                                 <tr>
                                     <td>Назначение:</td>
-                                    <td>для ногтевой пластины</td>
+                                    <td>{{ scissorsparam.use }}</td>
                                 </tr>
                                 <tr>
                                     <td>Длина режущей части:</td>
-                                    <td>50мм</td>
+                                    <td>{{ scissorsparam.length }} мм</td>
                                 </tr>
                                 <tr>
                                     <td>Особенности:</td>
-                                    <td>прямые</td>
+                                    <td>{{ scissorsparam.feature }}</td>
                                 </tr>
                             </table>
+                        {% endfor %}
                         <p><a href="#">Добавить в корзину</a></p>
                     </div>
                 </div>

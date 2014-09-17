@@ -37,12 +37,27 @@ class Container(models.Model):
 
 class NewsItem(models.Model):
     name = models.CharField(max_length=200)
-    content = models.CharField(max_length=200000)
+    content = models.TextField()
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):
         return u'%s' % self.name
         
 class IndexContent(models.Model):
-    content = models.CharField(max_length=200000)
+    content = models.TextField()
     
+class ScissorsParam(models.Model):
+    name = models.CharField(max_length=200)
+    material = models.CharField(max_length=200)
+    use = models.CharField(max_length=200)
+    length = models.IntegerField()
+    feature = models.CharField(max_length=300)
+    
+    def __unicode__(self):
+        return u'%s' % self.name
+        
+class Contact(models.Model):
+    phone = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    address = models.CharField(max_length=200)
+    metro = models.CharField(max_length=200)

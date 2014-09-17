@@ -26,29 +26,43 @@
                             <h3>{{ tool.tool_name }}</h3>
                             <p>{{ tool.tool_price }} руб</p>
                         </div>
-                        <a class="more" href="#info1"><img src="/{{ tool.tool_image }}"></a>
+                        <img src="/{{ tool.tool_image }}">
                     </li>
                     {% endfor %}
                     
                 </ul>
             </div>
             <div class="overlay">
-                <div class="backdrop">
-                </div>
+                <div class="backdrop"></div>
                 <div class="popup" id="popup1">
-                    <span class="close">X</span>
-                    <img src="img/sci.jpg">
-                    
+                    <div class="close"><img src="{% static 'tools/img/close.png' %}"></img></div>
+                    <div class="item_img">
+                        <img src="/{{ tool.tool_image }}">
+                    </div>
                     <div class="block popup_form">
-                        <ul>
-                            <li class="box shadow">Пинцеты</li>
-                            <li><span class="border">Param 2135</span></li>
-                            <li><span class="border">Param 20</span></li>
-                            <li><span class="border">Param 0152</span></li>
-                        </ul>
+                        {% for scissorsparam in scissorsparams %}
+                        <p class="shadow">{{ scissorsparam.name }}</p>
+                            <table>
+                                <tr>
+                                    <td>Материал:</td>
+                                    <td>{{ scissorsparam.material }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Назначение:</td>
+                                    <td>{{ scissorsparam.use }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Длина режущей части:</td>
+                                    <td>{{ scissorsparam.length }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Особенности:</td>
+                                    <td>{{ scissorsparam.feature }}</td>
+                                </tr>
+                            </table>
+                        {% endfor %}
+                        <p><a href="#">Добавить в корзину</a></p>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>

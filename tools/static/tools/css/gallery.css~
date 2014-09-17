@@ -280,7 +280,6 @@ option{outline: 1px solid grey;}
 
 .item_img{
     text-align: center;
-    padding-top: 10px;
 }
 
 .popup_form{

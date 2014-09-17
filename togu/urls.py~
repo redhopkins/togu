@@ -10,7 +10,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'togu.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
+    
+    url(r'admin_tools/', include('admin_tools.urls')),
     url(r'^$', views.index, name='index'),
     url(r'^contacts/', views.contacts, name='contacts'),
 	url(r'^gallery/', views.gallery, name='gallery'),
@@ -18,5 +19,5 @@ urlpatterns = patterns('',
 	url(r'^services/', views.contacts, name='services'),
 	url(r'^news/', views.news, name='news'),
     url(r'^admin/', include(admin.site.urls)),
-) + static('/upload/', document_root='/home/ogo/repository/togu/upload')
+) + static('/upload/', document_root='/home/ogo/repository/oncemore/togu/upload')
 
