@@ -30,11 +30,13 @@
                             <h3>{{ tool.name }}</h3>
                             <p>{{ tool.price }} руб</p>
                         </div>
+                        <div class="more_details">
                         <img src="/{{ tool.image }}">
                         <span style="display: none;">{{ tool.material }}</span>
                         <span style="display: none;">{{ tool.use }}</span>
                         <span style="display: none;">{{ tool.length }}</span>
                         <span style="display: none;">{{ tool.feature }}</span>
+                        </div>
                     </li>
                     {% endfor %}
                     

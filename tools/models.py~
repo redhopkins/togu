@@ -90,7 +90,6 @@ class Container(models.Model):
 
 class NewsItem(models.Model):
     name = models.CharField(max_length=200)
-    preview = models.CharField(max_length=120)
     content = models.TextField()
     pub_date = models.DateTimeField('date published')
 

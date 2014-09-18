@@ -1,8 +1,6 @@
 {% extends "tools/base.html" %}
 {% load staticfiles %}
 {% block map_js %}
-<script src="http://api-maps.yandex.ru/2.1/?load=Map,Placemark,geoObject.addon.balloon,geoObject.addon.hint,control.Manager,control.RouteEditor,control.ZoomControl,control.Button&lang=ru_RU" type="text/javascript"></script>
-<script src="{% static 'tools/js/map.js' %}" type="text/javascript"></script>
 {% endblock map_js %}
 {% block main %}
 <section>

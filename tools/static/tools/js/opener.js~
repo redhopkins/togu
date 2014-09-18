@@ -1,0 +1,6 @@
+$( document ).ready(function() {
+    $('.details').click(function() {
+        $(this).parent().children('div.more_details').toggle('normal');
+        return false;
+    })
+})   

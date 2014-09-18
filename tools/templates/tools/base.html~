@@ -11,8 +11,6 @@
         {% endblock gallery_js %}
         {% block map_js %}
         {% endblock map_js %}
-        {% block spoiler_js %}
-        {% endblock spoiler_js %}
         <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
         <![endif]-->

@@ -9,8 +9,8 @@
     {% for newsitem in news %}
     <article class="content">
         <h3>{{ newsitem.name }}</h3>
-        <p class="n-item">{{ newsitem.preview }}</p>
-        <p class="spoiler">{{ newsitem.content }}</p>
+        <p class="n-item">{{ newsitem.content }}</p>
+        <p class="spoiler">Someting written/ It's spoiler! It Works!</p>
     </article>
     {% endfor %}
 </section>

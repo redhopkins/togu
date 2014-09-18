@@ -92,7 +92,9 @@ a:hover{
     }
 
 .address{
-    line-height: 2em; 
+    font-size: 1em; 
+    line-height: 1.6em; 
+    margin-bottom: 0px;
     font-style: normal;
     text-align: right;
     /*font-family: Helvetica, "Lucida Sans Unicode", Verdana, sans-serif;*/
