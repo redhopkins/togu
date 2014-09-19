@@ -1,6 +1,0 @@
-$( document ).ready(function(){
-    $('.content').click(function(){
-        $(this).parent().children('p.spoiler').toggle('normal');
-        return false;
-    });
-})
