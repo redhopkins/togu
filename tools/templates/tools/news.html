@@ -9,6 +9,7 @@
     {% for newsitem in news %}
     <article class="content">
         <h3>{{ newsitem.name }}</h3>
+        <div class="pub">{{ newsitem.pub_date }}</div>
         <p class="n-item">{{ newsitem.preview }}</p>
         <p class="spoiler">{{ newsitem.content }}</p>
     </article>

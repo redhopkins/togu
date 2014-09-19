@@ -11,6 +11,8 @@
         {% endblock gallery_js %}
         {% block map_js %}
         {% endblock map_js %}
+        {% block spoiler_js %}
+        {% endblock spoiler_js %}
         <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
         <![endif]-->
@@ -40,11 +42,11 @@
                 <ul>
                     {% for menuitem in menuitems %}
 
-                    <!--<li {% if request.path == menuitem.dest|add:"/" %} class="selected !important" {% endif %}><a href="{{ menuitem.dest }}"><span>{{ menuitem.name }}</span></a></li>-->
+                    <!--<li {% if request.path == menuitem.dest|add:"/" %} class="selected !important" {% endif %}><a href="{{ menuitem.dest }}">{{ menuitem.name }}</a></li>-->
                     {% if request.path == menuitem.dest|add:"/" %}
-                        <li class="selected"><span>{{ menuitem.name }}</span></li>
+                        <li class="selected">{{ menuitem.name }}</li>
                     {% else %}
-                        <a href="{{ menuitem.dest }}"><li><span>{{ menuitem.name }}</span></li></a>
+                        <li><a href="{{ menuitem.dest }}">{{ menuitem.name }}</a></li>
                     {% endif %}
 
                     {% endfor %}

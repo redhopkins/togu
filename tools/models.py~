@@ -1,6 +1,7 @@
 #encoding: utf-8
 
 from django.db import models
+from tinymce.models import HTMLField
 
 # Create your models here.
 
@@ -90,17 +91,18 @@ class Container(models.Model):
 
 class NewsItem(models.Model):
     name = models.CharField(max_length=200)
-    content = models.TextField()
+    preview = models.CharField(max_length=120)
+    content = models.HTMLField()
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):
         return u'%s' % self.name
 
 class IndexContent(models.Model):
-    content = models.TextField()
+    content = models.HTMLField()
 
 class Contact(models.Model):
     phone = models.CharField(max_length=30)
-    email = models.CharField(max_length=30)
+    email = models.EmailField(max_length=30)
     address = models.CharField(max_length=200)
     metro = models.CharField(max_length=200)
