@@ -1,17 +1,16 @@
 {% extends "tools/base.html" %}
 {% load staticfiles %}
 {% block spoiler_js %}
-<script src="{% static 'tools/js/jquery-1.11.1.js' %}" type="text/javascript"></script>
 <script src="{% static 'tools/js/spoiler.js' %}" type="text/javascript"></script>
 {% endblock spoiler_js %}
 {% block main %}
 <section>
     {% for newsitem in news %}
     <article class="content">
-        <h3>{{ newsitem.name }}</h3>
-        <div class="pub">{{ newsitem.pub_date }}</div>
-        <p class="n-item">{{ newsitem.preview }}</p>
-        <p class="spoiler">{{ newsitem.content }}</p>
+        <div class="n-item"><h3>{{ newsitem.name }}</h3>
+        <div class="pub">{{ newsitem.pub_date|date:"d E Y" }}</div>
+        <p>{{ newsitem.preview }}</p></div>
+        <div class="spoiler">{{ newsitem.content|safe }}</div>
     </article>
     {% endfor %}
 </section>

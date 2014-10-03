@@ -1,6 +1,7 @@
 #encoding: utf-8
 
 from django.db import models
+from redactor.fields import RedactorField
 
 # Create your models here.
 
@@ -89,9 +90,15 @@ class Container(models.Model):
         return u'%s' % self.name
 
 class NewsItem(models.Model):
-    name = models.CharField(max_length=200)
-    preview = models.CharField(max_length=120)
-    content = models.TextField()
+    name = models.CharField(max_length=80)
+    preview = models.CharField(max_length=320)
+    content = RedactorField(
+        verbose_name=u'Text',
+        redactor_options={'lang': 'ru', 'focus': 'true'},
+        upload_to='/upload/',
+        allow_file_upload=True,
+        allow_image_upload=True
+    )
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):

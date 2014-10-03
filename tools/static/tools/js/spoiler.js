@@ -1,6 +1,6 @@
 $( document ).ready(function(){
     $('.n-item').click(function(){
-        $(this).parent().children('p.spoiler').toggle('normal');
+        $(this).parent().children('div.spoiler').toggle('normal');
         return false;
     });
 })
